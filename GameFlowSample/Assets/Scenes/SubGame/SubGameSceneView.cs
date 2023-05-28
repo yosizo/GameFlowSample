@@ -6,31 +6,25 @@ using VContainer.Unity;
 
 namespace Totekoya
 {
-    public class SubGameSceneView : MonoBehaviour,IInitializable
+    public class SubGameSceneView : MonoBehaviour
     {
         [SerializeField]
         private Button _button;
+        private int cnt;
 
-        [Inject]
-        private IPublisher<GameFlowManager.SceneChangeData> _publisher { get; set; }
-
-
-        public void Initialize()
+        private void Start()
         {
-            _button.onClick.RemoveAllListeners();
-            _button.onClick.AddListener(OnClickButton);
+            var subscriber = GlobalMessagePipe.GetSubscriber<int>();
+            subscriber.Subscribe(data =>
+            {
+                Debug.Log("subscribe:" + data);
+            });
         }
 
         public void OnClickButton()
         {
-            _publisher.Publish(new GameFlowManager.SceneChangeData()
-            {
-                sceneName = "Title"
-            });
-        }
-
-        private void OnDestroy()
-        {
+            var pub = GlobalMessagePipe.GetPublisher<int>();
+            pub.Publish(cnt++);
         }
     }
 }

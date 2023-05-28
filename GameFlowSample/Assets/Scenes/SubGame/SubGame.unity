@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 70190392}
   - component: {fileID: 70190394}
   - component: {fileID: 70190393}
+  - component: {fileID: 70190395}
   m_Layer: 0
   m_Name: SceneMain
   m_TagString: Untagged
@@ -319,7 +320,20 @@ MonoBehaviour:
   autoRun: 1
   autoInjectGameObjects: []
   injectionRoot: {fileID: 70190392}
-  view: {fileID: 70190393}
+  view: {fileID: 0}
+--- !u!114 &70190395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70190391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b33a9e5e74d4fa98f4b3f9d7c33fbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 233692811}
 --- !u!1 &233692809
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,7 +550,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 294771696}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 70190393}
+        m_TargetAssemblyTypeName: Totekoya.SubGameSceneView, Assembly-CSharp
+        m_MethodName: OnClickButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &294771696
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,10 +16,10 @@ namespace Totekoya
         // シーン独自の依存関係を記述する
         protected override void Configure(IContainerBuilder builder)
         {
-            builder.Register<SubGameSceneModel>(Lifetime.Singleton);
-            builder.RegisterComponent<SubGameSceneView>(view);
+            //builder.Register<SubGameSceneModel>(Lifetime.Singleton);
+            //builder.RegisterComponent<SubGameSceneView>(view);
 
-            builder.RegisterEntryPoint<SubGameScenePresenter>(Lifetime.Singleton);
+            //builder.RegisterEntryPoint<SubGameScenePresenter>(Lifetime.Singleton);
         }
     }
 }
