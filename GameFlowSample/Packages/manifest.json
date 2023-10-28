@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.cysharp.mastermemory": "2.3.5",
     "com.cysharp.messagepipe": "1.7.4",
     "com.cysharp.messagepipe.vcontainer": "1.7.4",
     "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
