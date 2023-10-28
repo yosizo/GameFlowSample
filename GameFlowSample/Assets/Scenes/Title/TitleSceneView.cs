@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using VContainer;
 using MessagePipe;
 using VContainer.Unity;
+using MemoryPack;
+
 
 namespace Totekoya
 {
@@ -20,6 +22,15 @@ namespace Totekoya
 
         public void Initialize()
         {
+            var v = new MemoryPackTestData();
+            v.age = 100;
+            v.Name = "hoge";
+            v.weight = 123.45f;
+            // シリアライズ
+            var bin = MemoryPackSerializer.Serialize(v);
+            // デシリアライズ
+            var val = MemoryPackSerializer.Deserialize<MemoryPackTestData>(bin);
+
             _button_main.onClick.RemoveAllListeners();
             _button_sub.onClick.RemoveAllListeners();
             _button_main.onClick.AddListener(OnClickButtonMain);

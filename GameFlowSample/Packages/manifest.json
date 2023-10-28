@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.cysharp.mastermemory": "2.3.5",
+    "com.cysharp.memorypack": "1.9.16",
     "com.cysharp.messagepipe": "1.7.4",
     "com.cysharp.messagepipe.vcontainer": "1.7.4",
     "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
@@ -16,7 +17,7 @@
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.4.8",
     "com.unity.ugui": "1.0.0",
-    "jp.hadashikick.vcontainer": "1.13.1",
+    "jp.hadashikick.vcontainer": "1.13.2",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",

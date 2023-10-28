@@ -1,15 +1,19 @@
 using MessagePack;
 
-[MessagePackObject]
-public class TestData
+namespace Totekoya
 {
-    [Key(0)]
-    public string str { get; set; }
 
-    [Key(1)]
-    public int num { get; set; }
+    [MessagePackObject]
+    public partial class TestData
+    {
+        [Key(0)]
+        public string str { get; set; }
 
-    [Key(2)]
-    public float fnum { get; set; }
+        [Key(1)]
+        public int num { get; set; }
 
+        [Key(2)]
+        public float fnum { get; set; }
+
+    }
 }
